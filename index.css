@@ -467,8 +467,16 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
 }
 
+.work__text_long {
+    flex: 0 0 60%;
+}
+
+.work__text_short {
+    flex: 0 0 30%;
+}
+
 .work__text {
-    flex: 0 0 70%;
+    flex: 0 0 30%;
 }
 
 .work__list {
