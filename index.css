@@ -704,41 +704,5 @@ body:not(.user-is-tabbing) a:focus {
   .beloved__card img{ height: 40rem; }
 }
 
-.beloved__row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--gutter-medium); /* spacing between text & image */
-    margin-bottom: var(--gutter-medium);
-  }
-  
-  .beloved__text{
-    flex: 1;
-    font-size: 1.8rem;
-    color: var(--white);
-  }
-  
-  .beloved__image{
-    flex: 1;
-    display: flex;
-    justify-content: flex-end; /* push image to the right */
-  }
-  
-  .beloved__image img{
-    max-width: 80%;
-    border-radius: 2rem;
-    box-shadow: 0 1.2rem 3rem rgba(0,0,0,.35);
-  }
-  
-  /* responsive: stack on small screens */
-  @media(max-width: 700px){
-    .beloved__row{
-      flex-direction: column;
-      text-align: center;
-    }
-    .beloved__image{
-      justify-content: center;
-    }
-  }
   
   
