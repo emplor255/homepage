@@ -704,40 +704,46 @@ body:not(.user-is-tabbing) a:focus {
   .beloved__card img{ height: 40rem; }
 }
 
-.beloved__row{
+/* beloved rows: text left, image right, with extra spacing */
+.beloved__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--gutter-medium); /* spacing between text & image */
+    gap: var(--gutter-huge); /* 🔑 space between text & image */
     margin-bottom: var(--gutter-medium);
   }
   
-  .beloved__text{
+  .beloved__text {
     flex: 1;
+    max-width: 50%;
     font-size: 1.8rem;
     color: var(--white);
   }
   
-  .beloved__image{
+  .beloved__image {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* push image to the right */
+    justify-content: flex-end;
+  }
+  .beloved__image img {
+    max-width: 100%;
+    border-radius: 1.6rem;
+    box-shadow: 0 1rem 2.5rem rgba(0,0,0,.4);
   }
   
-  .beloved__image img{
-    max-width: 90%;
-    border-radius: 2rem;
-    box-shadow: 0 1.2rem 3rem rgba(0,0,0,.35);
-  }
-  
-  /* responsive: stack on small screens */
-  @media(max-width: 700px){
-    .beloved__row{
+  /* responsive stacking */
+  @media(max-width: 900px){
+    .beloved__row {
       flex-direction: column;
       text-align: center;
+      gap: var(--gutter-normal);
     }
-    .beloved__image{
+    .beloved__text {
+      max-width: 100%;
+    }
+    .beloved__image {
       justify-content: center;
     }
   }
+  
   
