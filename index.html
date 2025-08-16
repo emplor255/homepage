@@ -239,25 +239,28 @@
 
     <!-- ***** Clients ***** -->
 
-    <section class="beloved" id="clients">
-      <div class="container">
-        <header class="beloved__header">
-          <h2 class="beloved__title">My Beloved People</h2>
-          <div class="beloved__logos">
-            <img src="./images/ronjones.png" alt="Ron Jones" />
-            <img src="./images/goldengrid.png" alt="Golden Grid" />
-            <img src="./images/bullseye.png"  alt="Bullseye" />
-            <img src="./images/mighty-furnitures.png" alt="Mighty Furnitures" />
-            <img src="./images/fastlane.png" alt="Fastlane" />
-            <img src="./images/chippy.png" alt="Chippy’s" />
-          </div>
-          <p class="beloved__lead">
-            I grew up in a happy family, surrounded by the love of my parents and the support of wonderful friends throughout my childhood and adolescence.
-            They shaped my character and became the most important parts of my life. So many of those memories I hold quietly in my heart.
-            But there is one connection I choose to share openly—because sometimes, making it known is the best way to keep it alive.
-          </p>
-        </header>
+    <section class="client beloved" id="clients">
+      <div class="row">
+        <h2>My Beloved People</h2>
     
+        <!-- logos (keeps your class names; styles are scoped under .beloved) -->
+        <div class="client__logos">
+          <img src="./images/ronjones.png" class="client__logo" alt="Ron Jones" />
+          <img src="./images/goldengrid.png" class="client__logo" alt="Golden Grid" />
+          <img src="./images/bullseye.png" class="client__logo" alt="Bullseye" />
+          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Mighty Furnitures" />
+          <img src="./images/fastlane.png" class="client__logo" alt="Fastlane" />
+          <img src="./images/chippy.png" class="client__logo" alt="Chippy’s" />
+        </div>
+    
+        <!-- lead text -->
+        <p class="beloved__lead">
+          I grew up in a happy family, surrounded by the love of my parents and the support of wonderful friends throughout my childhood and adolescence.
+          They shaped my character and became the most important parts of my life. So many of those memories I hold quietly in my heart.
+          But there is one connection I choose to share openly—because sometimes, making it known is the best way to keep it alive.
+        </p>
+    
+        <!-- responsive image cards -->
         <div class="beloved__grid">
           <figure class="beloved__card">
             <img src="./images/kaly (1).jpg" alt="Princess" />
@@ -269,9 +272,8 @@
             <figcaption>…and part-time she’s a baby princess <span aria-hidden="true">🍼</span></figcaption>
           </figure>
         </div>
-      </div>   
+      </div>
     </section>
-
   </main>
 
   <!-- ***** Contact ***** -->

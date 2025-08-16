@@ -621,108 +621,87 @@ body:not(.user-is-tabbing) a:focus {
 }
   
 
-  .container{
-    max-width:1100px;
-    margin:0 auto;
-    padding:0 24px;
-  }
-  
-  .beloved{
-    padding:72px 0 88px;
-  }
-  
-  .beloved__title{
-    font-size: clamp(28px, 4vw, 46px);
-    line-height:1.1;
-    text-align:center;
-    margin:0 0 16px;
-    letter-spacing:.3px;
-  }
-  
-  .beloved__title::after{
-    content:"";
-    display:block;
-    width:72px;
-    height:3px;
-    margin:14px auto 0;
-    background:var(--accent);
-    border-radius:2px;
-  }
-  
-  .beloved__logos{
-    display:flex;
-    flex-wrap:wrap;
-    gap:28px;
-    justify-content:center;
-    align-items:center;
-    margin:28px auto 10px;
-    opacity:.9;
-  }
-  
-  .beloved__logos img{
-    height:26px;
-    filter:grayscale(100%) contrast(110%) brightness(95%);
-    opacity:.6;
-    transition:opacity .25s ease, filter .25s ease, transform .25s ease;
-  }
-  
-  .beloved__logos img:hover{
-    opacity:1;
-    filter:none;
-    transform:translateY(-2px);
-  }
-  
-  .beloved__lead{
-    max-width:820px;
-    margin:18px auto 0;
-    text-align:center;
-    font-size:clamp(14px, 1.6vw, 17px);
-    line-height:1.7;
-    color:var(--muted);
-  }
-  
+/* ===== Beloved section (scoped; no global overrides) ===== */
+.beloved h2 { margin-bottom: var(--gutter-normal); }
+
+.beloved .client__logos{
+  gap: var(--gutter-normal);
+  justify-content: center;          /* centers logos on large screens */
+  align-items: center;
+  filter: grayscale(100%) opacity(.75);  /* keeps your vibe, a bit softer */
+  overflow: visible;                 /* undo scroll look for this section */
+}
+
+.beloved .client__logo{
+  height: 3rem;                      /* smaller, tidier row */
+  max-width: 16rem;
+  transition: transform .2s ease, filter .2s ease, opacity .2s ease;
+}
+.beloved .client__logo:hover{
+  transform: translateY(-2px);
+  filter: none;
+  opacity: 1;
+}
+
+/* lead paragraph under title */
+.beloved__lead{
+  max-width: var(--container-normal-width);
+  margin: var(--gutter-small) auto var(--gutter-medium);
+  text-align: center;
+  color: var(--white-1);
+  opacity: .95;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+}
+
+/* image grid (independent of .work__box to avoid conflicts) */
+.beloved__grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter-normal);
+}
+@media (min-width: 900px){
   .beloved__grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:28px;
-    margin-top:40px;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gutter-medium);
   }
-  
-  @media(min-width:900px){
-    .beloved__grid{
-      grid-template-columns:1fr 1fr;
-      gap:32px;
-    }
-  }
-  
-  .beloved__card{
-    background:linear-gradient(180deg, var(--card), #0f0f12);
-    border:1px solid var(--ring);
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
-    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  }
-  
-  .beloved__card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 16px 40px rgba(0,0,0,.45);
-    border-color:rgba(255,255,255,.12);
-  }
-  
-  .beloved__card img{
-    width:100%;
-    height:520px;
-    object-fit:cover;
-    display:block;
-  }
-  
-  .beloved__card figcaption{
-    padding:16px 18px 18px;
-    font-size:clamp(14px, 1.6vw, 16px);
-    color:var(--text);
-    border-top:1px solid var(--ring);
-  }
-  
-  .beloved__header{ margin-bottom:10px; }
+}
+
+/* cards */
+.beloved__card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  border: var(--border-light);
+  border-radius: 2.2rem;
+  overflow: hidden;
+  box-shadow: 0 1.2rem 3rem rgba(0,0,0,.35);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.beloved__card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 1.6rem 4rem rgba(0,0,0,.45);
+  border-color: rgba(229,229,230,0.18);
+}
+
+/* images */
+.beloved__card img{
+  width: 100%;
+  height: 52rem;
+  object-fit: cover;                 /* fills nicely */
+  display: block;
+}
+
+/* captions */
+.beloved__card figcaption{
+  padding: var(--gutter-small);
+  border-top: var(--border-light);
+  color: var(--white);
+  font-size: 1.6rem;                 /* aligns with your scale */
+  line-height: 1.5;
+}
+
+/* small devices: tighten image height a bit */
+@media (max-width: 600px){
+  .beloved__card img{ height: 40rem; }
+}
+
   
