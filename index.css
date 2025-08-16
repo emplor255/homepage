@@ -666,6 +666,12 @@ body:not(.user-is-tabbing) a:focus {
     gap: var(--gutter-medium);
   }
 }
+@media (min-width: 1200px) {
+    .beloved__grid {
+      grid-template-columns: 1fr 1fr 1fr; /* desktops: 3 columns */
+      gap: var(--gutter-medium);
+    }
+}
 
 /* cards */
 .beloved__card{
